@@ -125,17 +125,19 @@
                   html += '</div>'; // .btn-group
                 }
 
-                if (options.lists) {
+                if (options.boldItalic) {
                   html += '<div class="btn-group">';
                       html += '<button type="button" data-mdtooltip="tooltip" title="' + options.label.btnBold + '" class="md-btn btn btn-sm btn-default" data-btn="bold"><span class="glyphicon glyphicon-bold"></span></button>';
                       html += '<button type="button" data-mdtooltip="tooltip" title="' + options.label.btnItalic + '" class="md-btn btn btn-sm btn-default" data-btn="italic"><span class="glyphicon glyphicon-italic"></span></button>';
                   html += '</div>'; // .btn-group
                 }
 
-                html += '<div class="btn-group">';
-                    html += '<button type="button" data-mdtooltip="tooltip" title="' + options.label.btnList + '" class="md-btn btn btn-sm btn-default" data-btn="ul"><span class="glyphicon glyphicon glyphicon-list"></span></button>';
-                    html += '<button type="button" data-mdtooltip="tooltip" title="' + options.label.btnOrderedList + '" class="md-btn btn btn-sm btn-default" data-btn="ol"><span class="glyphicon glyphicon-th-list"></span></button>';
-                html += '</div>'; // .btn-group
+                if (options.lists) {
+                  html += '<div class="btn-group">';
+                      html += '<button type="button" data-mdtooltip="tooltip" title="' + options.label.btnList + '" class="md-btn btn btn-sm btn-default" data-btn="ul"><span class="glyphicon glyphicon glyphicon-list"></span></button>';
+                      html += '<button type="button" data-mdtooltip="tooltip" title="' + options.label.btnOrderedList + '" class="md-btn btn btn-sm btn-default" data-btn="ol"><span class="glyphicon glyphicon-th-list"></span></button>';
+                  html += '</div>'; // .btn-group
+                }
 
                 html += '<div class="btn-group">';
                     html += '<button type="button" data-mdtooltip="tooltip" title="' + options.label.btnLink + '" class="md-btn btn btn-sm btn-default" data-btn="link"><span class="glyphicon glyphicon-link"></span></button>';
@@ -176,7 +178,8 @@
                 preview = false,
                 fullscreen = false,
                 headers = false,
-                lists = false;
+                lists = false,
+                boldItalic = false;
 
             // Hide the textarea
             plugin.addClass('md-textarea-hidden');
